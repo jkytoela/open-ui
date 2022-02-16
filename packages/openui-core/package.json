@@ -17,9 +17,10 @@
   },
   "devDependencies": {
     "@openui/tsconfig": "*",
-    "eslint-preset-openui": "*",
+    "@stitches/react": "^1.2.6",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
+    "eslint-preset-openui": "*",
     "react": "^17.0.2",
     "tsup": "^5.10.1",
     "typescript": "^4.5.3"
