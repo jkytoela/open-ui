@@ -14,13 +14,30 @@ export const {
   reset,
 } = createStitches({
   theme: {
+    // TODO: Naming conventions
     colors: {
+      // Brand colors
       primary: '#3457c2',
       primaryStrong: '#2746a3',
-      text: '#0c1a3d',
-      link: '#3456bd',
+      
+      // Surface colors
       background: '#ffffff',
+
+      // Component specific colors
       buttonHover: '#f6f8f8',
+      buttonBorder: '#667680',
+      
+      // Borders
+      borderStrong: '#c5cdd3',
+
+      // Texts
+      text: '#0c1a3d',
+      textWeak: '#313e44',
+      textWeaker: '#63737c',
+
+      // Misc
+      link: '#3456bd',
+      white: '#ffffff',
     },
     fonts: {
       sans: 'Inter, -apple-system, system-ui, sans-serif',
@@ -50,7 +67,7 @@ export const {
     fontSizes: {
       1: '12px',
       2: '13px',
-      3: '15px',
+      3: '14px',
       4: '17px',
       5: '19px',
       6: '21px',
@@ -73,6 +90,9 @@ export const {
       4: '400',
       max: '999',
     },
+    shadows: {
+      default: '0 1px 3px rgba(12, 12, 12, 0.1)',
+    }
   },
   media: {
     bp1: '(min-width: 520px)',
@@ -82,6 +102,7 @@ export const {
     motion: '(prefers-reduced-motion)',
   },
   utils: {
+    // Padding helpers
     p: (value: Stitches.PropertyValue<'padding'>) => ({
       padding: value,
     }),
@@ -106,6 +127,7 @@ export const {
       paddingBottom: value,
     }),
 
+    // Margin helpers
     m: (value: Stitches.PropertyValue<'margin'>) => ({
       margin: value,
     }),
@@ -128,71 +150,6 @@ export const {
     my: (value: Stitches.PropertyValue<'marginTop'>) => ({
       marginTop: value,
       marginBottom: value,
-    }),
-
-    ta: (value: Stitches.PropertyValue<'textAlign'>) => ({ textAlign: value }),
-
-    fd: (value: Stitches.PropertyValue<'flexDirection'>) => ({ flexDirection: value }),
-    fw: (value: Stitches.PropertyValue<'flexWrap'>) => ({ flexWrap: value }),
-
-    ai: (value: Stitches.PropertyValue<'alignItems'>) => ({ alignItems: value }),
-    ac: (value: Stitches.PropertyValue<'alignContent'>) => ({ alignContent: value }),
-    jc: (value: Stitches.PropertyValue<'justifyContent'>) => ({ justifyContent: value }),
-    as: (value: Stitches.PropertyValue<'alignSelf'>) => ({ alignSelf: value }),
-    fg: (value: Stitches.PropertyValue<'flexGrow'>) => ({ flexGrow: value }),
-    fs: (value: Stitches.PropertyValue<'flexShrink'>) => ({ flexShrink: value }),
-    fb: (value: Stitches.PropertyValue<'flexBasis'>) => ({ flexBasis: value }),
-
-    bc: (value: Stitches.PropertyValue<'backgroundColor'>) => ({
-      backgroundColor: value,
-    }),
-
-    br: (value: Stitches.PropertyValue<'borderRadius'>) => ({
-      borderRadius: value,
-    }),
-    btrr: (value: Stitches.PropertyValue<'borderTopRightRadius'>) => ({
-      borderTopRightRadius: value,
-    }),
-    bbrr: (value: Stitches.PropertyValue<'borderBottomRightRadius'>) => ({
-      borderBottomRightRadius: value,
-    }),
-    bblr: (value: Stitches.PropertyValue<'borderBottomLeftRadius'>) => ({
-      borderBottomLeftRadius: value,
-    }),
-    btlr: (value: Stitches.PropertyValue<'borderTopLeftRadius'>) => ({
-      borderTopLeftRadius: value,
-    }),
-
-    bs: (value: Stitches.PropertyValue<'boxShadow'>) => ({ boxShadow: value }),
-
-    lh: (value: Stitches.PropertyValue<'lineHeight'>) => ({ lineHeight: value }),
-
-    ox: (value: Stitches.PropertyValue<'overflowX'>) => ({ overflowX: value }),
-    oy: (value: Stitches.PropertyValue<'overflowY'>) => ({ overflowY: value }),
-
-    pe: (value: Stitches.PropertyValue<'pointerEvents'>) => ({ pointerEvents: value }),
-    us: (value: Stitches.PropertyValue<'userSelect'>) => ({
-      WebkitUserSelect: value,
-      userSelect: value,
-    }),
-
-    userSelect: (value: Stitches.PropertyValue<'userSelect'>) => ({
-      WebkitUserSelect: value,
-      userSelect: value,
-    }),
-
-    size: (value: Stitches.PropertyValue<'width'>) => ({
-      width: value,
-      height: value,
-    }),
-
-    appearance: (value: Stitches.PropertyValue<'appearance'>) => ({
-      WebkitAppearance: value,
-      appearance: value,
-    }),
-    backgroundClip: (value: Stitches.PropertyValue<'backgroundClip'>) => ({
-      WebkitBackgroundClip: value,
-      backgroundClip: value,
     }),
   },
 });

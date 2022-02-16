@@ -8,7 +8,11 @@ export default function Docs() {
   return (
     <div>
       <h1>Open UI Documentation</h1>
-      <Button>Click me</Button>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'start' }}>
+        <Button>Click me</Button>
+        <Button variant="primary">Click me</Button>
+        <Button disabled>Click me</Button>
+      </div>
     </div>
   );
 }
